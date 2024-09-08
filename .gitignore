@@ -1,6 +1,7 @@
-folder
-allure-results
-logs
+###folder###
+allure-results/
+logs/
+.gitignore
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
