@@ -25,7 +25,7 @@ public class HttpMethods {
     public void validateGetRequest(){
         given().
                 //baseUri("https://api.postman.com").
-                header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey()).
+                //header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey()).
         when().
                 get("/workspaces").
         then().
@@ -42,7 +42,7 @@ public class HttpMethods {
     public void extract_response(){
 
         Response response = given()
-                .header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey())
+        //        .header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey())
         .when()
                 .get("/workspaces")
         .then()
@@ -57,7 +57,7 @@ public class HttpMethods {
     public void extract_single_value_from_response(){
 
         String name = given()
-                .header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey())
+        //        .header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey())
                 .when()
                 .get("/workspaces")
                 .then()
