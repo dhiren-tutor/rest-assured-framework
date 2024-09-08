@@ -43,4 +43,10 @@ public class ConfigLoader {
         if(prop != null) return prop;
         else throw new RuntimeException("user_id not specified in the config.properties file");
     }
+
+    public String getXAPIKey(){
+        String prop = properties.getProperty("x_api_key");
+        if(prop != null) return prop;
+        else throw new RuntimeException("x_api_key not specified in the config.properties file");
+    }
 }

@@ -1,5 +1,6 @@
 package com.dtlabs.httpmethods;
 
+import com.dtlabs.spotify.oauth2.utils.ConfigLoader;
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -24,7 +25,7 @@ public class HttpMethods {
     public void validateGetRequest(){
         given().
                 //baseUri("https://api.postman.com").
-                header("X-Api-Key", "PMAK-669205429e896000011546a5-271bab936cefac37b4b9f52248f014c4ec").
+                header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey()).
         when().
                 get("/workspaces").
         then().
@@ -41,7 +42,7 @@ public class HttpMethods {
     public void extract_response(){
 
         Response response = given()
-                .header("X-Api-Key", "PMAK-669205429e896000011546a5-271bab936cefac37b4b9f52248f014c4ec")
+                .header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey())
         .when()
                 .get("/workspaces")
         .then()
@@ -56,7 +57,7 @@ public class HttpMethods {
     public void extract_single_value_from_response(){
 
         String name = given()
-                .header("X-Api-Key", "PMAK-669205429e896000011546a5-271bab936cefac37b4b9f52248f014c4ec")
+                .header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey())
                 .when()
                 .get("/workspaces")
                 .then()
@@ -80,7 +81,7 @@ public class HttpMethods {
     public void request_response_logging(){
 
         given().
-                header("X-Api-Key", "PMAK-669205429e896000011546a5-271bab936cefac37b4b9f52248f014c4ec").
+                header("X-Api-Key", ConfigLoader.getInstance().getXAPIKey()).
         when().
                 get("/workspaces").
         then().
