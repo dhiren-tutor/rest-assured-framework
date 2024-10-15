@@ -3,7 +3,6 @@ package com.dtlabs.restassured;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static io.restassured.RestAssured.when;
 
 public class PathAndQueryParams {
 

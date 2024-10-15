@@ -7,7 +7,7 @@ import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
-public class CookieDemo {
+public class CookieTest {
 
     @Test
     public void testCookie(){

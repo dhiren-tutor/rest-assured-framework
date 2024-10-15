@@ -4,8 +4,6 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.QueryableRequestSpecification;
 import io.restassured.specification.SpecificationQuerier;
-
-import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.requestSpecification;
 
 public class ReqSpecification {
